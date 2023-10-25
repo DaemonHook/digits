@@ -1,0 +1,3326 @@
+fileFormatVersion: 2
+guid: 38a79345a5a375d428933e1e898c8919
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UIpack_vector_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 660
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efc0dd0d6ccae142ac8e6038b7730e4
+      internalID: 1542800898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_1
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 660
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29659b9cc0e0ce44f85430f5a6c8eed9
+      internalID: 694065863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_2
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 660
+        width: 190
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3600acd803ca1e54282996f3f0cf9d39
+      internalID: -579450054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_3
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 660
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cd09ab2cb285a408ceb23cc8e9837a
+      internalID: -1757126738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_4
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 660
+        width: 190
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d40ca2d4af543c4d9de907657e1a5c2
+      internalID: -1326167693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_5
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 660
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2b2016a53102b4796e890ef3813aff
+      internalID: -106240743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_6
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 660
+        width: 171
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171dced7c6ee32c48bf95bf5bd0d2667
+      internalID: 245043642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_7
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 600
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85fd89986cb2ac43b320d0dd111a843
+      internalID: 1361785073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_8
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 600
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea982c4a15ae4dc4b9fecb4337691916
+      internalID: 631648691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_9
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 600
+        width: 190
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96d5de9068069a40ad5a3f47facb086
+      internalID: 739561558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_10
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 600
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe4924de94d73f41a774fd65cd7c08e
+      internalID: -482121163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_11
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 600
+        width: 190
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5dc8f065f69d246a18b7b9c638dacd
+      internalID: 843048885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_12
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 600
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c627dc324e2ef3c4db54cf47ac3adf63
+      internalID: -1869242101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 600
+        width: 171
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a991a1775d55504290120bed79bf49a
+      internalID: 349190877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_14
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 540
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8843cbcfe8aafa45b20e4c06e7f9cdc
+      internalID: -1367048039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_15
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 540
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80dfbba8413ded348ab5d472d7e176b7
+      internalID: -45327127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_16
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 540
+        width: 190
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee56f861ee5e3a4c990626d27175fbc
+      internalID: -1077961809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_17
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 540
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30338bf7664d93f4cb137b4878689370
+      internalID: 1939672634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_18
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 540
+        width: 190
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13c116415440634190fc9247f501626
+      internalID: 419864393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_19
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 540
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfb3fb9beef4c34fbfdace39b412cc9
+      internalID: 1343815468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_20
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 540
+        width: 171
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727d1ae6db40d80468801547c2513695
+      internalID: -1281488444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_21
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 480
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf804be67114a6f469a72e6a920adeb6
+      internalID: 2127088092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_22
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 480
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74773b0301c8c94fab87fc17ca7e9e4
+      internalID: 2021857664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_23
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 480
+        width: 190
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42dda6f1736d4714dae7e459e52c0d2b
+      internalID: 49919484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_24
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 480
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4ceba1927ea9c4988721d5ff407cd3
+      internalID: -580744996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_25
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 480
+        width: 190
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cf0595b79ef8d46807889625b7c08f
+      internalID: -656910233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_26
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 480
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a764d0c660b06644bc527605b3065b9
+      internalID: -1765218925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_27
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 480
+        width: 171
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b684cf474a24c14bafac786497644d7
+      internalID: -775868475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_28
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 420
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323c4f6c4d94296439cf79123a25637c
+      internalID: 2128996535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_29
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 420
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd4fae70dcb8624881c1da024b2d7d5
+      internalID: 1405752262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_30
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 420
+        width: 190
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c205fd31f3ca7ff4ab7e21ea03f2fe11
+      internalID: 770688201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_31
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 420
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3886f3b48273f8f4a8179e9cea1e3ab5
+      internalID: -306976741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_32
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 420
+        width: 190
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db94656089d0b7546b7ca043cb253fd3
+      internalID: 649221955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_33
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 420
+        width: 190
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d41461ff335fd43b9c766576edf274
+      internalID: -1826178827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_34
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 420
+        width: 171
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff8c2819053f0246968bc2f1a09bbfe
+      internalID: -1905452940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_35
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 299
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001fbfe149c2b1c48891db5f0dfae1f3
+      internalID: 1533419084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_36
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 299
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4920dc2e3a9f2469f3d420fbe4e6c0
+      internalID: 2017100178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_37
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 299
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea88dce475b79a4281963deb308da2c
+      internalID: 1740330840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_38
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 299
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83bba42ab5f54d4baf8ce5a988c50e8
+      internalID: -276573688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_39
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 299
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752cd8f2fcde02f4cb45f5799613866b
+      internalID: 1905980449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_40
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 343
+        width: 194
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305fbd5a014d25f48847caec4bec67a9
+      internalID: 1518058835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_41
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 388
+        width: 190
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce065b0d020d5c4eac53f33e30f90e4
+      internalID: -1341765571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_42
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 291
+        width: 4
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7b58bbdf623184aa6d8bba24d623d4
+      internalID: -1088263502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_43
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 357
+        width: 171
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c436413d3129e4da6cf25ec5b86ca6
+      internalID: 1450544123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_44
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 367
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6accd5bb4997fc4680b134a7c6db46d
+      internalID: 453271984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_45
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 233
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce27b0bc11f55004f907ea4501c957e3
+      internalID: -1300684530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_46
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 233
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7718d2e2aa38a645b8683992e2b502e
+      internalID: 1069084975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_47
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 233
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc1f809582ba804a8be85f991b91076
+      internalID: -1922370953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_48
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 233
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a8e846b782cf84fbda44bd60d30a6c
+      internalID: 55031081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_49
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 233
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ed1b4ed7af2614c83a33b3fc3dba2b
+      internalID: 1591648884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_50
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 233
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28137bf468364634480a21fa8b5839d0
+      internalID: 295609968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_51
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 220
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0958f79e6f229bc47bf344fcecf96b07
+      internalID: 2015542091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_52
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 220
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cd6bf8983a92c4db76533563faebf8
+      internalID: -861327203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_53
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 220
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb4336ec0f51524d8c843244ffc4017
+      internalID: 749517971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_54
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 220
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b2c67ea29aac049b544e4ef9cc83ab
+      internalID: -437452481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_55
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 220
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825f081d50a29994c9cc8fb8c9e74f19
+      internalID: -2084330707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_56
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 220
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc416246ca9093146bc5d24249a745cb
+      internalID: 2140715610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_57
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 220
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148fe3f15d8dd744f98a4b20bc728637
+      internalID: -1777289168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_58
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 228
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10be3b3a99e5bd74eb9a26014de7e9f5
+      internalID: 437334694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_59
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 241
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356de69ef6a17e04289fe8428af81894
+      internalID: 901559194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_60
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 223
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f348aedecca9c694880b932fc54bad3b
+      internalID: -2122793501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_61
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 223
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33908bdfcdcfc104c823d2ea30dc45b6
+      internalID: 126175972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_62
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 228
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e36219c4278c348a3f2c02bd360d75
+      internalID: -77949523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_63
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 228
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c5bcfb985f2e14f8582a1bfc84a457
+      internalID: -1873793134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_64
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 157
+        width: 171
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444cfe37219df974ca15c410cebb6746
+      internalID: -1924084874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_65
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 193
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef4013912dd0d141b1b324c302737a0
+      internalID: 786785481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_66
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 193
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc96ebc6ff86be41a5127ce47b071a6
+      internalID: -257274661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_67
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 193
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5916fe377f8361a42bc167e2d85cc03c
+      internalID: 117191393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_68
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 193
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172b473f129674d4299520586df1c77d
+      internalID: 345447472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_69
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 193
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff47b7a89db4fc445bd7d0ef7c2af0d3
+      internalID: -285461652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_70
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 193
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50810c0add52c564aa7eff31a6ea9a89
+      internalID: 764652388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_71
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 160
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c7ee57facdfa44f9c7270fa5ffa704
+      internalID: -1521384401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_72
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 160
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2daf277a93588d844ac9f6642c67f642
+      internalID: 696454005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_73
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 160
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6daf00c97e191ab49bc27e64ae171f28
+      internalID: 148217030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_74
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 160
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d40993c9c23c8748ab4fff1a889770f
+      internalID: 41952707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_75
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 160
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1ed258d8aef7f4c90fad2bd8eff9ee
+      internalID: 2049578110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_76
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 160
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4be52c06b57e7349af7ccc525f6acb2
+      internalID: 490160974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_77
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 160
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef2af1adb6806849ac246a0e9a93aef
+      internalID: 18620197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_78
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 168
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671deb66d68039f47958b8eb67a0e7a5
+      internalID: -89430634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_79
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 163
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c6df802da98da4ea14e8030f300e39
+      internalID: 451791094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_80
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 163
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a7d2454bae3664698c53b01ab6f867
+      internalID: -2132195838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_81
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 168
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97a53fbd5242c547b4dfd4a21db43c3
+      internalID: 2103965791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_82
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 168
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b266d39310ace4ea311dbb03ab8184
+      internalID: 698563179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_83
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 181
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1083b541ab1614396853a63dc2cb90
+      internalID: 1961325422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_84
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 129
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c290fba014e1a44927d719878f8cb8
+      internalID: -1203420019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_85
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 129
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f161bd78af2b1544bd7c6adb2a8e425
+      internalID: 1951573808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_86
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 129
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736a1f0733186944d9dd1bffcfb4770a
+      internalID: 1409927357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_87
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 129
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bbeb7f09f7f2c4459bc2cf7630739a0
+      internalID: -472172911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_88
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 129
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a8141cc8b0644439f78f9960951ba1
+      internalID: 1687714122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_89
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 129
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56339af7a86e43e4192677e4ff009622
+      internalID: 2011143641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_90
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 100
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183c35f08b9773c478a884f88db3021c
+      internalID: -170515354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_91
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 100
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada06e8bdb5482a4eb9a65aa0913dfa4
+      internalID: 1677485609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_92
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 100
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c4b1e4292a85b428095b4bfa56e8ff
+      internalID: 1739317688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_93
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 100
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d76acd07b3dfef40ba134bdb0addcf3
+      internalID: -334377922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_94
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 100
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2562e93dc6a57e841a8611a67232c17e
+      internalID: -585615164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_95
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 100
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a524752c71e704d4b9502f537f434de8
+      internalID: -1826656539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_96
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 100
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df3917c33c5ba145b734f84184bb08b
+      internalID: 740779266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_97
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 108
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e74f7217ea98040ac320db155719ec
+      internalID: -976814284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_98
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 121
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a066019f06ba14d857f91c5629452f
+      internalID: -416619901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_99
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 103
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b24802fc0d54d5468c1e3ae8150d13a
+      internalID: 802496559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_100
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 103
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8997d2c3f295d4893ba1c6730d7679
+      internalID: 1596118387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_101
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 108
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1650c4b3167fd4380a301c0bde577e
+      internalID: 785920771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_102
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 108
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a975214775776dc4393dadf350fe31da
+      internalID: -1209843793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_103
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 87
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d8db7ba3a26e547a1c8987fc9b5d1a
+      internalID: 2097918705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_104
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 87
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b2b66743f511a4eafbeafd4227d46b
+      internalID: -1963335259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_105
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 87
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5cc5ff7c6ab8542b3123b940c83239
+      internalID: -2057692961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_106
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 87
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5347952ebf2af04489ac8b8ad9f8592e
+      internalID: 724587151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_107
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 87
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a776f06253af984ea3816d41d7cf2ea
+      internalID: -2080470179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_108
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 87
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b83d3c2ab60d9b4c8e401211865f9b8
+      internalID: -1126634919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_109
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 40
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ff5f05823e19047b7e8430cb156b66
+      internalID: 684206327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_110
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 40
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e845acc59cd0dd94698869c9863286bc
+      internalID: -2000442295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_111
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 40
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e959079a8dd884b9ff43417f41f31c
+      internalID: -1964021016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_112
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 40
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932de90878a90f5439a6ef4c8dd4ee9a
+      internalID: -319620979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_113
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 29
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5984a0b5bc5c0784c83045d9c326e9e4
+      internalID: 1646838330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_114
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 29
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b1ccc52da828b409e9c6cbdaecdc9d
+      internalID: 599845125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_115
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 29
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a533b44dfbc45084aa4165e2e932639e
+      internalID: 2055159577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_116
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 29
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68c6388182453646bad99973d04600b
+      internalID: 554413742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_117
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 29
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ce61d58222f2045a7f8bbc250bf48d
+      internalID: -1972589473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_118
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 40
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bab0e4a3d1e1324684d72ab4589f24b
+      internalID: 1097872964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_119
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 40
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cad8fa3e6043964899f81d03289bbfc
+      internalID: 333664240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_120
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 40
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a133b2a43b7d34f986737ddb9bb080
+      internalID: 2078455226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_121
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 48
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b193c115005f4dc45bb126edea0de168
+      internalID: 1750177152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_122
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 61
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9584dfb0bbcc6824eb54e84113ad61d4
+      internalID: 115834889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_123
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 43
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd25d25b28f0134cabad61d1c89f2d1
+      internalID: 249875489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_124
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 43
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4abcc125caa37040a3abc2d2da882d7
+      internalID: 2037899198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_125
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 48
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae24a50f6de3424c9eef7ea284a137a
+      internalID: -1371326575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_126
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 48
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a2b612a6385694ebd40729f87464e0
+      internalID: 1346788435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_127
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e28d24fef00ed54c8a8993257422e39
+      internalID: 250398282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_128
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077b9b84313f15c40ac8fb071713a557
+      internalID: -1280554038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_129
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1c9d593e0a73f4e843c697a9f9b934
+      internalID: -554482131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_130
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 0
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12506f79e71b426469284b9b0fd0f76a
+      internalID: -1178609699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_131
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a3181251f495340b190fdf1ee4046f
+      internalID: 1968523346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_132
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 0
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f715e82e95d66479e1c4184d6ad25e
+      internalID: -1792961157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_133
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 49
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789f1ba3f293ca44b9bf1bdf371bd37e
+      internalID: -275735424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_134
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 49
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8875b3c7081c7254a835560e13f12735
+      internalID: -746730005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_135
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 0
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3995e59f5ef3d2846afc5a381bb27558
+      internalID: -103841427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_136
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 49
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70687c6bc7636d7448421f6a6c3aa7f2
+      internalID: -2099612875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_137
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 0
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c32d393d0c3c124a89316df6fe03566
+      internalID: 1303322610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_138
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 49
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6beff05f31d5e4386237606393b9f7
+      internalID: 390488328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_139
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2fb914171617d4469a91b8ef6736e87
+      internalID: 925075568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_140
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 0
+        width: 36
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73cbe43eea2ff5947b4bfdb527796bbb
+      internalID: 229960172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_141
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 0
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6351b003c24f64183d9da7b1628340
+      internalID: -1423056947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_142
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 0
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5085ca6d2e9dfc84996709c232217a8a
+      internalID: -1092611995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_143
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 0
+        width: 39
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b955e5893bf5f0469147015e7531990
+      internalID: -1437341895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIpack_vector_144
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 0
+        width: 39
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5378f5555c0239a4484db6486f303572
+      internalID: -611359338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      UIpack_vector_0: 1542800898
+      UIpack_vector_1: 694065863
+      UIpack_vector_10: -482121163
+      UIpack_vector_100: 1596118387
+      UIpack_vector_101: 785920771
+      UIpack_vector_102: -1209843793
+      UIpack_vector_103: 2097918705
+      UIpack_vector_104: -1963335259
+      UIpack_vector_105: -2057692961
+      UIpack_vector_106: 724587151
+      UIpack_vector_107: -2080470179
+      UIpack_vector_108: -1126634919
+      UIpack_vector_109: 684206327
+      UIpack_vector_11: 843048885
+      UIpack_vector_110: -2000442295
+      UIpack_vector_111: -1964021016
+      UIpack_vector_112: -319620979
+      UIpack_vector_113: 1646838330
+      UIpack_vector_114: 599845125
+      UIpack_vector_115: 2055159577
+      UIpack_vector_116: 554413742
+      UIpack_vector_117: -1972589473
+      UIpack_vector_118: 1097872964
+      UIpack_vector_119: 333664240
+      UIpack_vector_12: -1869242101
+      UIpack_vector_120: 2078455226
+      UIpack_vector_121: 1750177152
+      UIpack_vector_122: 115834889
+      UIpack_vector_123: 249875489
+      UIpack_vector_124: 2037899198
+      UIpack_vector_125: -1371326575
+      UIpack_vector_126: 1346788435
+      UIpack_vector_127: 250398282
+      UIpack_vector_128: -1280554038
+      UIpack_vector_129: -554482131
+      UIpack_vector_13: 349190877
+      UIpack_vector_130: -1178609699
+      UIpack_vector_131: 1968523346
+      UIpack_vector_132: -1792961157
+      UIpack_vector_133: -275735424
+      UIpack_vector_134: -746730005
+      UIpack_vector_135: -103841427
+      UIpack_vector_136: -2099612875
+      UIpack_vector_137: 1303322610
+      UIpack_vector_138: 390488328
+      UIpack_vector_139: 925075568
+      UIpack_vector_14: -1367048039
+      UIpack_vector_140: 229960172
+      UIpack_vector_141: -1423056947
+      UIpack_vector_142: -1092611995
+      UIpack_vector_143: -1437341895
+      UIpack_vector_144: -611359338
+      UIpack_vector_15: -45327127
+      UIpack_vector_16: -1077961809
+      UIpack_vector_17: 1939672634
+      UIpack_vector_18: 419864393
+      UIpack_vector_19: 1343815468
+      UIpack_vector_2: -579450054
+      UIpack_vector_20: -1281488444
+      UIpack_vector_21: 2127088092
+      UIpack_vector_22: 2021857664
+      UIpack_vector_23: 49919484
+      UIpack_vector_24: -580744996
+      UIpack_vector_25: -656910233
+      UIpack_vector_26: -1765218925
+      UIpack_vector_27: -775868475
+      UIpack_vector_28: 2128996535
+      UIpack_vector_29: 1405752262
+      UIpack_vector_3: -1757126738
+      UIpack_vector_30: 770688201
+      UIpack_vector_31: -306976741
+      UIpack_vector_32: 649221955
+      UIpack_vector_33: -1826178827
+      UIpack_vector_34: -1905452940
+      UIpack_vector_35: 1533419084
+      UIpack_vector_36: 2017100178
+      UIpack_vector_37: 1740330840
+      UIpack_vector_38: -276573688
+      UIpack_vector_39: 1905980449
+      UIpack_vector_4: -1326167693
+      UIpack_vector_40: 1518058835
+      UIpack_vector_41: -1341765571
+      UIpack_vector_42: -1088263502
+      UIpack_vector_43: 1450544123
+      UIpack_vector_44: 453271984
+      UIpack_vector_45: -1300684530
+      UIpack_vector_46: 1069084975
+      UIpack_vector_47: -1922370953
+      UIpack_vector_48: 55031081
+      UIpack_vector_49: 1591648884
+      UIpack_vector_5: -106240743
+      UIpack_vector_50: 295609968
+      UIpack_vector_51: 2015542091
+      UIpack_vector_52: -861327203
+      UIpack_vector_53: 749517971
+      UIpack_vector_54: -437452481
+      UIpack_vector_55: -2084330707
+      UIpack_vector_56: 2140715610
+      UIpack_vector_57: -1777289168
+      UIpack_vector_58: 437334694
+      UIpack_vector_59: 901559194
+      UIpack_vector_6: 245043642
+      UIpack_vector_60: -2122793501
+      UIpack_vector_61: 126175972
+      UIpack_vector_62: -77949523
+      UIpack_vector_63: -1873793134
+      UIpack_vector_64: -1924084874
+      UIpack_vector_65: 786785481
+      UIpack_vector_66: -257274661
+      UIpack_vector_67: 117191393
+      UIpack_vector_68: 345447472
+      UIpack_vector_69: -285461652
+      UIpack_vector_7: 1361785073
+      UIpack_vector_70: 764652388
+      UIpack_vector_71: -1521384401
+      UIpack_vector_72: 696454005
+      UIpack_vector_73: 148217030
+      UIpack_vector_74: 41952707
+      UIpack_vector_75: 2049578110
+      UIpack_vector_76: 490160974
+      UIpack_vector_77: 18620197
+      UIpack_vector_78: -89430634
+      UIpack_vector_79: 451791094
+      UIpack_vector_8: 631648691
+      UIpack_vector_80: -2132195838
+      UIpack_vector_81: 2103965791
+      UIpack_vector_82: 698563179
+      UIpack_vector_83: 1961325422
+      UIpack_vector_84: -1203420019
+      UIpack_vector_85: 1951573808
+      UIpack_vector_86: 1409927357
+      UIpack_vector_87: -472172911
+      UIpack_vector_88: 1687714122
+      UIpack_vector_89: 2011143641
+      UIpack_vector_9: 739561558
+      UIpack_vector_90: -170515354
+      UIpack_vector_91: 1677485609
+      UIpack_vector_92: 1739317688
+      UIpack_vector_93: -334377922
+      UIpack_vector_94: -585615164
+      UIpack_vector_95: -1826656539
+      UIpack_vector_96: 740779266
+      UIpack_vector_97: -976814284
+      UIpack_vector_98: -416619901
+      UIpack_vector_99: 802496559
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
