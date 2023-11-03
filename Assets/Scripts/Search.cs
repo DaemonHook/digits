@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class Search
 {
@@ -13,7 +14,6 @@ public class Search
         DFS,
         ASTAR1,
         ASTAR2,
-        RANDOM
     }
 
     /// <summary>
@@ -59,6 +59,7 @@ public class Search
         {
             state = new State(pre.state);
             state.DoOperation(op);
+            preOp = op;
             preNode = pre;
             depth = pre.depth + 1;
         }
@@ -70,9 +71,15 @@ public class Search
 
     public SearchMethod method;
 
-    public Func<IEnumerable<SearchResult>> NextStepFunction;
-    
-    
+    private Action NextStepFunction;
+
+    public void RefreshNext()
+    {
+        NextStepFunction();
+    }
+
+    public SearchResult CurResult;
+
     public Search(State startState, SearchMethod method)
     {
         initialNode = new Node(startState);
@@ -85,6 +92,21 @@ public class Search
 
         endingState = new State(r * r, d);
         this.method = method;
+
+        visitedSet.Clear();
+        queue = new Queue<Node>();
+        queue.Enqueue(initialNode);
+        stack = new Stack<Node>();
+        stack.Push(initialNode);
+        sortedSet1.Clear();
+        sortedSet1.Add(initialNode);
+        sortedSet2.Clear();
+        sortedSet2.Add(initialNode);
+        visitedSet.Add(initialNode.state);
+
+
+
+
         switch (this.method)
         {
             case SearchMethod.BFS:
@@ -119,20 +141,16 @@ public class Search
         public bool SearchCanProceed;
         public Node CurSearchingNode;
     }
-    
-    
-    
-    private readonly HashSet<State> visitedSet = new HashSet<State>();
 
-    private IEnumerable<SearchResult> BFSSearch()
+
+
+    private readonly HashSet<State> visitedSet = new HashSet<State>(new StateComparer());
+    private Queue<Node> queue;
+    private void BFSSearch()
     {
-        visitedSet.Clear();
-        Queue<Node> q = new Queue<Node>();
-        q.Enqueue(initialNode);
-        visitedSet.Add(initialNode.state);
-        while (q.Count > 0)
+        if (queue.Count > 0)
         {
-            Node cur = q.Dequeue();
+            Node cur = queue.Dequeue();
             bool isEndingState = cur.state.Equals(endingState);
 
             foreach (var op in operations)
@@ -142,28 +160,28 @@ public class Search
                     Node newNode = new Node(cur, op);
                     if (!visitedSet.Contains(newNode.state))
                     {
+                        //Debug.Log($"added {newNode.state}");
                         visitedSet.Add(newNode.state);
-                        q.Enqueue(newNode);
+                        queue.Enqueue(newNode);
                     }
                 }
             }
 
-            yield return new SearchResult
-                { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+            CurResult = new SearchResult
+            { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+            return;
         }
 
-        yield return new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
+        CurResult = new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
     }
 
-    private IEnumerable<SearchResult> DFSSearch()
+
+    private Stack<Node> stack;
+    private void DFSSearch()
     {
-        visitedSet.Clear();
-        Stack<Node> s = new Stack<Node>();
-        s.Push(initialNode);
-        visitedSet.Add(initialNode.state);
-        while (s.Count > 0)
+        if (stack.Count > 0)
         {
-            Node cur = s.Pop();
+            Node cur = stack.Pop();
             bool isEndingState = cur.state.Equals(endingState);
 
             foreach (var op in operations)
@@ -173,17 +191,20 @@ public class Search
                     Node newNode = new Node(cur, op);
                     if (!visitedSet.Contains(newNode.state))
                     {
+                        //Debug.Log($"added \n{newNode.state}");
                         visitedSet.Add(newNode.state);
-                        s.Push(newNode);
+                        stack.Push(newNode);
                     }
                 }
             }
 
-            yield return new SearchResult
-                { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+            CurResult = new SearchResult
+            { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+            return;
+
         }
 
-        yield return new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
+        CurResult = new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
     }
 
     /// <summary>
@@ -245,7 +266,7 @@ public class Search
             }
         }
     }
-    
+
     private class AStarComp2 : IComparer<Node>
     {
         public int Compare(Node x, Node y)
@@ -264,17 +285,14 @@ public class Search
         }
     }
 
-    private IEnumerable<SearchResult> AStarSearch1()
+    SortedSet<Node> sortedSet1 = new SortedSet<Node>(new AStarComp1());
+    private void AStarSearch1()
     {
-        visitedSet.Clear();
-        SortedSet<Node> ss = new SortedSet<Node>(new AStarComp1());
-        ss.Add(initialNode);
-        visitedSet.Add(initialNode.state);
-        while (ss.Count > 0)
+        if (sortedSet1.Count > 0)
         {
-            Node cur = ss.First();
-            ss.Remove(cur);
-            
+            Node cur = sortedSet1.First();
+            sortedSet1.Remove(cur);
+
             bool isEndingState = cur.state.Equals(endingState);
 
             foreach (var op in operations)
@@ -285,29 +303,29 @@ public class Search
                     if (!visitedSet.Contains(newNode.state))
                     {
                         visitedSet.Add(newNode.state);
-                        ss.Add(newNode);
+                        sortedSet1.Add(newNode);
                     }
                 }
             }
 
-            yield return new SearchResult
-                { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+            CurResult = new SearchResult
+            { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+            return;
+
         }
 
-        yield return new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
+        CurResult = new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
     }
-    
-    private IEnumerable<SearchResult> AStarSearch2()
+
+    SortedSet<Node> sortedSet2 = new SortedSet<Node>(new AStarComp2());
+
+    private void AStarSearch2()
     {
-        visitedSet.Clear();
-        SortedSet<Node> ss = new SortedSet<Node>(new AStarComp1());
-        ss.Add(initialNode);
-        visitedSet.Add(initialNode.state);
-        while (ss.Count > 0)
+        if (sortedSet2.Count > 0)
         {
-            Node cur = ss.First();
-            ss.Remove(cur);
-            
+            Node cur = sortedSet2.First();
+            sortedSet2.Remove(cur);
+
             bool isEndingState = cur.state.Equals(endingState);
 
             foreach (var op in operations)
@@ -318,15 +336,17 @@ public class Search
                     if (!visitedSet.Contains(newNode.state))
                     {
                         visitedSet.Add(newNode.state);
-                        ss.Add(newNode);
+                        sortedSet2.Add(newNode);
                     }
                 }
             }
 
-            yield return new SearchResult
-                { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+            CurResult = new SearchResult
+            { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+            return;
+
         }
 
-        yield return new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
+        CurResult = new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
     }
 }

@@ -82,7 +82,17 @@ public class State
 
     public bool Equals(State other)
     {
-        return this.digits.Equals(other.digits);
+        for (int i = 0; i < radius; i++)
+        {
+            for (int j = 0; j < radius; j++)
+            {
+                if (digits[i, j] != other.digits[i, j])
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     /// <summary>
@@ -99,8 +109,8 @@ public class State
     public bool CanDoOperation(Operation op)
     {
         Vector2Int newZeroPos = zeroPos + Util.Delta[op];
-        if (!CheckBorder(newZeroPos)) return false;
-        return true;
+        if (CheckBorder(newZeroPos)) return true;
+        return false;
     }
 
     /// <summary>
@@ -112,5 +122,32 @@ public class State
         (digits[newZeroPos.x, newZeroPos.y], digits[zeroPos.x, zeroPos.y]) =
             (digits[zeroPos.x, zeroPos.y], digits[newZeroPos.x, newZeroPos.y]);
         zeroPos = newZeroPos;
+    }
+
+    public override string ToString()
+    {
+        StringBuilder sb = new StringBuilder();
+        for (int j = radius - 1; j >= 0; j--)
+        {
+            for (int i = 0; i < radius; i++)
+            {
+                sb.Append(digits[i, j].ToString());
+                sb.Append(',');
+            }
+        }
+        return sb.ToString();
+    }
+}
+
+public class StateComparer : IEqualityComparer<State>
+{
+    public bool Equals(State x, State y)
+    {
+        return x.Equals(y);
+    }
+
+    public int GetHashCode(State obj)
+    {
+        return obj.GetHashCode();
     }
 }

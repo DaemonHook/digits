@@ -30,8 +30,13 @@ public class Digit : MonoBehaviour
         "#b3424a",
     };
 
-    public void Init(int number, Vector3 scale)
+    public Vector2Int Position;
+    public int Number;
+
+    public void Init(int number, Vector3 scale, Vector2Int position)
     {
+        Number = number;
+        Position = position;
         text.text = number.ToString();
         transform.localScale = scale;
         Color c = Color.black;

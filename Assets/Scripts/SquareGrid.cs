@@ -16,30 +16,36 @@ public class SquareGrid : MonoBehaviour
             Destroy(child.gameObject);
         }
     }
+    private void Start()
+    {
+        available = true;
+    }
 
     public GameObject digitPF;
 
-    private State startState;
+    private State curState;
 
-    private List<GameObject> digitGOs;
     private List<Digit> digits;
-    private Dictionary<Vector2Int, Digit> digitDic = new Dictionary<Vector2Int, Digit>();
 
-    public Vector3 DigitScale => new(1.0f / startState.radius, 1.0f / startState.radius,
-        1.0f / startState.radius);
+    public Vector3 DigitScale => new(1.0f / curState.radius, 1.0f / curState.radius,
+        1.0f / curState.radius);
 
     public float DigitRadius => DigitScale.x / 2f;
 
-    private Vector2Int zeroPos;
-
     public Queue<Step> stpQueue = new Queue<Step>();
 
-    public bool available;
-    
+    public bool available = true;
+
     public struct Step
     {
         public State startState;
         public Operation op;
+
+        public Step(State s, Operation o)
+        {
+            startState = s;
+            op = o;
+        }
     }
 
     private Vector2 GetRealPos(Vector2Int logicPos)
@@ -52,11 +58,11 @@ public class SquareGrid : MonoBehaviour
 
     private Vector2Int GetLogicPos(int number)
     {
-        for (int i = 0; i < startState.radius; i++)
+        for (int i = 0; i < curState.radius; i++)
         {
-            for (int j = 0; j < startState.radius; j++)
+            for (int j = 0; j < curState.radius; j++)
             {
-                if (startState.digits[i, j] == number)
+                if (curState.digits[i, j] == number)
                 {
                     return new Vector2Int(i, j);
                 }
@@ -68,77 +74,93 @@ public class SquareGrid : MonoBehaviour
 
     public void Init(State start)
     {
-        available = true;
-        startState = start;
-        stpQueue.Clear();
-        digitDic.Clear();
+        curState = start;
+        //stpQueue.Clear();
         for (int i = transform.childCount - 1; i >= 0; i--)
         {
             Transform child = transform.GetChild(i);
             Destroy(child.gameObject);
         }
 
-        Debug.Log($"DigitRadius: {DigitRadius}");
+        //Debug.Log($"DigitRadius: {DigitRadius}");
         digits = new List<Digit>();
-        digitGOs = new List<GameObject>();
-        digits.Add(null);
-        digitGOs.Add(null);
+
+        var locDict = new Dictionary<int, Vector2Int>();
+        for (int i = 0; i < start.radius; i++)
+            for (int j = 0; j < start.radius; j++)
+            {
+                locDict.Add(start.digits[i, j], new Vector2Int(i, j));
+            }
 
         //没有0
-        for (int i = 1; i < startState.length; i++)
+        for (int i = 1; i < curState.length; i++)
         {
             var newDigitGO = Instantiate(digitPF, transform);
             var d = newDigitGO.GetComponent<Digit>();
-            digitGOs.Add(newDigitGO);
+            d.Init(i, DigitScale, locDict[i]);
             digits.Add(d);
-            d.Init(i, DigitScale);
             var logicPos = GetLogicPos(i);
-            digitDic.Add(logicPos, d);
             var realPos = GetRealPos(logicPos);
-            Debug.Log($"{i} logic pos: {logicPos}, real pos: {realPos}");
+            //Debug.Log($"{i} logic pos: {logicPos}, real pos: {realPos}");
             d.transform.localPosition = realPos;
         }
     }
 
     public void Clear()
     {
-        available = true;
+        curState = null;
         stpQueue.Clear();
+        available = false;
         for (int i = transform.childCount - 1; i >= 0; i--)
         {
             Transform child = transform.GetChild(i);
             Destroy(child.gameObject);
         }
     }
-    
+
     // Update is called once per frame
     void Update()
     {
+
         if (available && stpQueue.Count > 0)
         {
+            available = false;
             var stp = stpQueue.Dequeue();
+            Debug.Log($"step queue dequeued! length: {stpQueue.Count}");
             Debug.Log($"grid doing {stp.op}");
             DoStep(stp);
         }
     }
-    
-    private void DoStep(Step stp)
+
+    Step stp;
+    private void MoveZero()
     {
-        Init(stp.startState);
-        var toMovePos = zeroPos + Util.Delta[stp.op];
-        var digit = digitDic[toMovePos];
+        var toMovePos = stp.startState.zeroPos + Util.Delta[stp.op];
+        Debug.Log($"moving from {stp.startState.zeroPos} to {toMovePos}");
+        var digit = digits.Find((d) =>
+        {
+            return d != null && d.Position == toMovePos;
+        });
         var dGO = digit.gameObject;
-        var moveToRealPos = GetRealPos(zeroPos);
-        available = false;
+
+        var moveToRealPos = GetRealPos(stp.startState.zeroPos);
         var twe = dGO.transform.DOLocalMove(moveToRealPos, 1.0f);
         twe.OnComplete(() => { available = true; });
-        digitDic.Remove(toMovePos);
-        digitDic.Add(zeroPos, digit);
-        zeroPos = toMovePos;
+    }
+
+    private void DoStep(Step stp)
+    {
+        this.stp = stp;
+        Init(stp.startState);
+        Invoke("MoveZero", 0.5f);
+
+        //digitDic.Remove(toMovePos);
+        //digitDic.Add(zeroPos, digit);
     }
 
     public void AddStep(Step stp)
     {
         stpQueue.Enqueue(stp);
+        Debug.Log($"step queue enqueued! length: {stpQueue.Count}");
     }
 }
