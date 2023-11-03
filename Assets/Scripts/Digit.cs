@@ -25,9 +25,9 @@ public class Digit : MonoBehaviour
         "#367459",
         "#70A19F",
         "#2E3A1F",
-        "#007947",
-        "#274d3d",
-        "#c77eb5",
+        "#d1c7b7",
+        "#b3424a",
+        "#b3424a",
     };
 
     public void Init(int number, Vector3 scale)

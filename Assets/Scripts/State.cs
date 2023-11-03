@@ -23,10 +23,10 @@ public static class Util
     /// </summary>
     public static Dictionary<Operation, Vector2Int> Delta = new Dictionary<Operation, Vector2Int>
     {
-        { Operation.UP, new Vector2Int(-1, 0) },
-        { Operation.LEFT, new Vector2Int(0, -1) },
-        { Operation.DOWN, new Vector2Int(1, 0) },
-        { Operation.RIGHT, new Vector2Int(0, 1) }
+        { Operation.UP, new Vector2Int(0, 1) },
+        { Operation.LEFT, new Vector2Int(-1, 0) },
+        { Operation.DOWN, new Vector2Int(0, -1) },
+        { Operation.RIGHT, new Vector2Int(1, 0) }
     };
 }
 
@@ -35,6 +35,10 @@ public static class Util
 /// </summary>
 public class State
 {
+    public int length
+    {
+        get { return radius * radius; }
+    }
     public int radius { get; private set; }
     public int[,] digits { get; private set; }
 
@@ -44,11 +48,13 @@ public class State
     {
         radius = (int)Math.Sqrt(length);
         digits = new int[radius, radius];
-        Array.Copy(ints, digits, length);
+        // Array.Copy(ints, digits, length);
+        int cnt = 0;
         for (int i = 0; i < radius; i++)
         {
             for (int j = 0; j < radius; j++)
             {
+                digits[i, j] = ints[cnt++];
                 if (digits[i, j] == 0)
                     zeroPos = new Vector2Int(i, j);
             }

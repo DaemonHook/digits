@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
+using DG.Tweening;
 
 public class SquareGrid : MonoBehaviour
 {
@@ -15,29 +17,32 @@ public class SquareGrid : MonoBehaviour
         }
     }
 
-    public GameObject digit;
+    public GameObject digitPF;
 
-    [Header("正方形边长")] public int Radius;
-
-    [Header("问题规模")] public int Length;
-
-    [FormerlySerializedAs("State")] [Header("当前状态")]
-    public int[] Input;
-
-    private int[,] grid;
+    private State startState;
 
     private List<GameObject> digitGOs;
     private List<Digit> digits;
+    private Dictionary<Vector2Int, Digit> digitDic = new Dictionary<Vector2Int, Digit>();
 
-    public Vector3 DigitScale => new(1.0f / Radius, 1.0f / Radius, 1.0f / Radius);
+    public Vector3 DigitScale => new(1.0f / startState.radius, 1.0f / startState.radius,
+        1.0f / startState.radius);
 
     public float DigitRadius => DigitScale.x / 2f;
 
     private Vector2Int zeroPos;
 
-    // public Vector2 
+    public Queue<Step> stpQueue = new Queue<Step>();
 
-    public Vector2 GetDigitPos(Vector2Int logicPos)
+    public bool available;
+    
+    public struct Step
+    {
+        public State startState;
+        public Operation op;
+    }
+
+    private Vector2 GetRealPos(Vector2Int logicPos)
     {
         return new Vector2(
             -0.5f + DigitRadius + 2 * DigitRadius * logicPos.x,
@@ -45,13 +50,13 @@ public class SquareGrid : MonoBehaviour
         );
     }
 
-    public Vector2Int GetCurrentPos(int number)
+    private Vector2Int GetLogicPos(int number)
     {
-        for (int i = 0; i < Radius; i++)
+        for (int i = 0; i < startState.radius; i++)
         {
-            for (int j = 0; j < Radius; j++)
+            for (int j = 0; j < startState.radius; j++)
             {
-                if (grid[i, j] == number)
+                if (startState.digits[i, j] == number)
                 {
                     return new Vector2Int(i, j);
                 }
@@ -61,55 +66,79 @@ public class SquareGrid : MonoBehaviour
         throw new Exception($"{number} not found in grid");
     }
 
-    public void Init()
+    public void Init(State start)
     {
+        available = true;
+        startState = start;
+        stpQueue.Clear();
+        digitDic.Clear();
         for (int i = transform.childCount - 1; i >= 0; i--)
         {
             Transform child = transform.GetChild(i);
             Destroy(child.gameObject);
         }
+
         Debug.Log($"DigitRadius: {DigitRadius}");
         digits = new List<Digit>();
         digitGOs = new List<GameObject>();
         digits.Add(null);
         digitGOs.Add(null);
-        grid = new int[Radius, Radius];
-        int cnt = 0;
-        for (int i = 0; i < Radius; i++)
-        {
-            for (int j = 0; j < Radius; j++)
-            {
-                grid[i, j] = Input[cnt++];
-                if (grid[i, j] == 0)
-                {
-                    zeroPos = new Vector2Int(i, j);
-                }
-            }
-        }
 
         //没有0
-        for (int i = 1; i < Length; i++)
+        for (int i = 1; i < startState.length; i++)
         {
-            var newDigitGO = Instantiate(digit, transform);
+            var newDigitGO = Instantiate(digitPF, transform);
             var d = newDigitGO.GetComponent<Digit>();
             digitGOs.Add(newDigitGO);
             digits.Add(d);
             d.Init(i, DigitScale);
-            var logicPos = GetCurrentPos(i);
-            var realPos = GetDigitPos(logicPos);
+            var logicPos = GetLogicPos(i);
+            digitDic.Add(logicPos, d);
+            var realPos = GetRealPos(logicPos);
             Debug.Log($"{i} logic pos: {logicPos}, real pos: {realPos}");
             d.transform.localPosition = realPos;
         }
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void Clear()
     {
+        available = true;
+        stpQueue.Clear();
+        for (int i = transform.childCount - 1; i >= 0; i--)
+        {
+            Transform child = transform.GetChild(i);
+            Destroy(child.gameObject);
+        }
     }
-
+    
     // Update is called once per frame
     void Update()
     {
+        if (available && stpQueue.Count > 0)
+        {
+            var stp = stpQueue.Dequeue();
+            Debug.Log($"grid doing {stp.op}");
+            DoStep(stp);
+        }
+    }
+    
+    private void DoStep(Step stp)
+    {
+        Init(stp.startState);
+        var toMovePos = zeroPos + Util.Delta[stp.op];
+        var digit = digitDic[toMovePos];
+        var dGO = digit.gameObject;
+        var moveToRealPos = GetRealPos(zeroPos);
+        available = false;
+        var twe = dGO.transform.DOLocalMove(moveToRealPos, 1.0f);
+        twe.OnComplete(() => { available = true; });
+        digitDic.Remove(toMovePos);
+        digitDic.Add(zeroPos, digit);
+        zeroPos = toMovePos;
+    }
+
+    public void AddStep(Step stp)
+    {
+        stpQueue.Enqueue(stp);
     }
 }
