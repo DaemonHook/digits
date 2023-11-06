@@ -98,13 +98,16 @@ public class Search
         queue.Enqueue(initialNode);
         stack = new Stack<Node>();
         stack.Push(initialNode);
-        sortedSet1.Clear();
-        sortedSet1.Add(initialNode);
-        sortedSet2.Clear();
-        sortedSet2.Add(initialNode);
+        _compDic1.Clear();
+        heap1.Clear();
+        heap1.Enqueue(initialNode);
+        _compDic2.Clear();
+        heap2.Clear();
+        heap2.Enqueue(initialNode);
+        _compDic3.Clear();
+        // sortedSet3.Clear();
+        // sortedSet3.Add(initialNode);
         visitedSet.Add(initialNode.state);
-
-
 
 
         switch (this.method)
@@ -143,9 +146,9 @@ public class Search
     }
 
 
-
     private readonly HashSet<State> visitedSet = new HashSet<State>(new StateComparer());
     private Queue<Node> queue;
+
     private void BFSSearch()
     {
         if (queue.Count > 0)
@@ -168,7 +171,7 @@ public class Search
             }
 
             CurResult = new SearchResult
-            { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+                { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
             return;
         }
 
@@ -177,6 +180,7 @@ public class Search
 
 
     private Stack<Node> stack;
+
     private void DFSSearch()
     {
         if (stack.Count > 0)
@@ -199,9 +203,8 @@ public class Search
             }
 
             CurResult = new SearchResult
-            { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+                { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
             return;
-
         }
 
         CurResult = new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
@@ -249,49 +252,183 @@ public class Search
         return cnt;
     }
 
+    private static readonly Dictionary<Node, int> _compDic1 = new Dictionary<Node, int>();
+
     private class AStarComp1 : IComparer<Node>
     {
         public int Compare(Node x, Node y)
         {
-            int xv = NotInPositionCount(x.state);
-            int yv = NotInPositionCount(y.state);
-            var c = xv.CompareTo(yv);
-            if (c != 0)
+            int xv, yv;
+            if (_compDic1.ContainsKey(x))
             {
-                return c;
+                xv = _compDic1[x];
             }
             else
             {
-                return x.state.ToString().CompareTo(y.state.ToString());
+                xv = ManhattanDistanceSum(x.state) + x.depth;
+                _compDic1[x] = xv;
             }
+
+            if (_compDic1.ContainsKey(y))
+            {
+                yv = _compDic1[y];
+            }
+            else
+            {
+                yv = ManhattanDistanceSum(y.state) + y.depth;
+                _compDic1[y] = yv;
+            }
+
+            var c = xv.CompareTo(yv);
+            return c != 0 ? c : x.state.ToString().CompareTo(y.state.ToString());
         }
     }
+
+    private static readonly Dictionary<Node, int> _compDic2 = new Dictionary<Node, int>();
+
+    private static int theta = 8;
 
     private class AStarComp2 : IComparer<Node>
     {
         public int Compare(Node x, Node y)
         {
-            int xv = ManhattanDistanceSum(x.state);
-            int yv = ManhattanDistanceSum(y.state);
-            var c = xv.CompareTo(yv);
-            if (c != 0)
+            int xv, yv;
+            if (_compDic2.ContainsKey(x))
             {
-                return c;
+                xv = _compDic2[x];
             }
             else
             {
-                return x.state.ToString().CompareTo(y.state.ToString());
+                xv = ManhattanDistanceSum(x.state) + x.depth;
+                xv += NotInPositionCount(x.state);
+                // int rev = 0;
+                int[] arr = new int[x.state.length];
+                int cnt = 0;
+                for (int i = 0; i < x.state.radius; i++)
+                {
+                    for (int j = 0; j < x.state.radius; j++)
+                    {
+                        arr[cnt++] = x.state.digits[i, j];
+                    }
+                }
+                //
+                // // cnt = 0;
+                // for (int i = 0; i < x.state.radius; i++)
+                // for (int j = i + 1; j < x.state.radius; j++)
+                //     if (arr[i] != 0 && arr[j] != 0)
+                //     {
+                //         if (arr[i] > arr[j])
+                //             rev++;
+                //     }
+                int q = 0;
+                for (int i = 0; i < arr.Length - 1; i++)
+                {
+                    if (arr[i] > arr[i + 1]) q++;
+                }
+
+                xv += theta * q;
             }
+
+            if (_compDic2.ContainsKey(y))
+            {
+                yv = _compDic2[x];
+            }
+            else
+            {
+                yv = ManhattanDistanceSum(y.state) + y.depth;
+                yv += NotInPositionCount(y.state);
+                int rev = 0;
+                int[] arr = new int[y.state.length];
+                int cnt = 0;
+                for (int i = 0; i < y.state.radius; i++)
+                {
+                    for (int j = 0; j < y.state.radius; j++)
+                    {
+                        arr[cnt++] = y.state.digits[i, j];
+                    }
+                }
+
+                int q = 0;
+                for (int i = 0; i < arr.Length - 1; i++)
+                {
+                    if (arr[i] > arr[i + 1]) q++;
+                }
+
+                yv += theta * q;
+            }
+
+            var c = xv.CompareTo(yv);
+            return c;
+        }
+    }
+    // private class AStarComp2 : IComparer<Node>
+    // {
+    //     public int Compare(Node x, Node y)
+    //     {
+    //         int xv, yv;
+    //         if (_compDic2.ContainsKey(x))
+    //         {
+    //             xv = _compDic2[x];
+    //         }
+    //         else
+    //         {
+    //             xv = ManhattanDistanceSum(x.state) + x.depth;
+    //             _compDic2[x] = xv;
+    //         }
+    //         if (_compDic2.ContainsKey(y))
+    //         {
+    //             yv = _compDic2[y];
+    //         }
+    //         else
+    //         {
+    //             yv = ManhattanDistanceSum(y.state) + y.depth;
+    //             _compDic2[y] = yv;
+    //         }
+    //         var c = xv.CompareTo(yv);
+    //         return c != 0 ? c : x.state.ToString().CompareTo(y.state.ToString());
+    //     }
+    // }
+
+
+    private static readonly Dictionary<Node, int> _compDic3 = new Dictionary<Node, int>();
+
+    private class AStarComp3 : IComparer<Node>
+    {
+        public int Compare(Node x, Node y)
+        {
+            int xv, yv;
+            if (_compDic2.ContainsKey(x))
+            {
+                xv = _compDic2[x];
+            }
+            else
+            {
+                xv = ManhattanDistanceSum(x.state) + x.depth;
+                _compDic2[x] = xv;
+            }
+
+            if (_compDic2.ContainsKey(y))
+            {
+                yv = _compDic2[y];
+            }
+            else
+            {
+                yv = ManhattanDistanceSum(y.state) + y.depth;
+                _compDic2[y] = yv;
+            }
+
+            var c = xv.CompareTo(yv);
+            return c != 0 ? c : x.state.ToString().CompareTo(y.state.ToString());
         }
     }
 
-    SortedSet<Node> sortedSet1 = new SortedSet<Node>(new AStarComp1());
+    readonly MinHeap<Node> heap1 = new MinHeap<Node>(new AStarComp1());
+
     private void AStarSearch1()
     {
-        if (sortedSet1.Count > 0)
+        if (heap1.Count > 0)
         {
-            Node cur = sortedSet1.First();
-            sortedSet1.Remove(cur);
+            Node cur = heap1.Dequeue();
 
             bool isEndingState = cur.state.Equals(endingState);
 
@@ -303,28 +440,26 @@ public class Search
                     if (!visitedSet.Contains(newNode.state))
                     {
                         visitedSet.Add(newNode.state);
-                        sortedSet1.Add(newNode);
+                        heap1.Enqueue(newNode);
                     }
                 }
             }
 
             CurResult = new SearchResult
-            { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+                { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
             return;
-
         }
 
         CurResult = new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
     }
 
-    SortedSet<Node> sortedSet2 = new SortedSet<Node>(new AStarComp2());
+    readonly MinHeap<Node> heap2 = new MinHeap<Node>(new AStarComp2());
 
     private void AStarSearch2()
     {
-        if (sortedSet2.Count > 0)
+        if (heap2.Count > 0)
         {
-            Node cur = sortedSet2.First();
-            sortedSet2.Remove(cur);
+            Node cur = heap2.Dequeue();
 
             bool isEndingState = cur.state.Equals(endingState);
 
@@ -336,17 +471,18 @@ public class Search
                     if (!visitedSet.Contains(newNode.state))
                     {
                         visitedSet.Add(newNode.state);
-                        sortedSet2.Add(newNode);
+                        heap2.Enqueue(newNode);
                     }
                 }
             }
 
             CurResult = new SearchResult
-            { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+                { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
             return;
-
         }
 
         CurResult = new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
     }
+
+    // SortedSet<Node> sortedSet2 = new SortedSet<Node>(new  )
 }

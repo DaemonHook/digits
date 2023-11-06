@@ -43,7 +43,8 @@ public class State
     public int[,] digits { get; private set; }
 
     public Vector2Int zeroPos { get; private set; }
-
+    
+    
     public State(int length, int[] ints)
     {
         radius = (int)Math.Sqrt(length);
@@ -59,6 +60,7 @@ public class State
                     zeroPos = new Vector2Int(i, j);
             }
         }
+        RefreshHashCode();
     }
 
     public State(State s)
@@ -67,9 +69,12 @@ public class State
         digits = new int[radius, radius];
         Array.Copy(s.digits, digits, s.digits.Length);
         zeroPos = s.zeroPos;
+        hashCode = s.GetHashCode();
     }
 
-    public override int GetHashCode()
+    private int hashCode;
+
+    private void RefreshHashCode()
     {
         StringBuilder stringBuilder = new StringBuilder();
         foreach (var d in this.digits)
@@ -77,7 +82,12 @@ public class State
             stringBuilder.Append(d.ToString());
         }
 
-        return stringBuilder.ToString().GetHashCode();
+        hashCode = stringBuilder.ToString().GetHashCode();
+    }
+    
+    public override int GetHashCode()
+    {
+        return hashCode;
     }
 
     public bool Equals(State other)
@@ -122,6 +132,7 @@ public class State
         (digits[newZeroPos.x, newZeroPos.y], digits[zeroPos.x, zeroPos.y]) =
             (digits[zeroPos.x, zeroPos.y], digits[newZeroPos.x, newZeroPos.y]);
         zeroPos = newZeroPos;
+        RefreshHashCode();
     }
 
     public override string ToString()
