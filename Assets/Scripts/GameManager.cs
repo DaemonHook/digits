@@ -302,9 +302,13 @@ public class GameManager : MonoBehaviour
                 //thread.Start();
                 TT.Instance.StartThread(SearchEngine);
             }
-            else
+            else if (mode == GameMode.Visiable)
             {
                 ShowMsg("同步展示搜索过程……");
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException();
             }
         }
     }

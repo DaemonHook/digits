@@ -110,7 +110,7 @@ public class SquareGrid : MonoBehaviour
     {
         curState = null;
         stpQueue.Clear();
-        available = false;
+        available = true;
         for (int i = transform.childCount - 1; i >= 0; i--)
         {
             Transform child = transform.GetChild(i);

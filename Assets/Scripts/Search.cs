@@ -471,6 +471,7 @@ public class Search
 
     private static readonly Dictionary<Node, int> _compDic3 = new Dictionary<Node, int>();
 
+    private static readonly int alpha = 1, beta = 1;
     /// <summary>
     /// 将最小交换次数作为启发函数
     /// </summary>
@@ -485,7 +486,7 @@ public class Search
             }
             else
             {
-                xv = ManhattanDistanceSum(x.state) + countRev(in x.state) + x.depth;
+                xv = alpha * ManhattanDistanceSum(x.state) + beta * countRev(in x.state) + x.depth;
                 _compDic3[x] = xv;
             }
 
@@ -495,7 +496,7 @@ public class Search
             }
             else
             {
-                yv = ManhattanDistanceSum(y.state) + countRev(in y.state) + y.depth;
+                yv = alpha * ManhattanDistanceSum(y.state) + beta * countRev(in y.state) + y.depth;
                 _compDic3[y] = yv;
             }
 
