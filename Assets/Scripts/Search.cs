@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using UnityEngine;
 
@@ -14,6 +16,7 @@ public class Search
         DFS,
         ASTAR1,
         ASTAR2,
+        ASTAR3,
     }
 
     /// <summary>
@@ -105,28 +108,22 @@ public class Search
         heap2.Clear();
         heap2.Enqueue(initialNode);
         _compDic3.Clear();
+        heap3.Clear();
+        heap3.Enqueue(initialNode);
         // sortedSet3.Clear();
         // sortedSet3.Add(initialNode);
         visitedSet.Add(initialNode.state);
 
-
-        switch (this.method)
+        Debug.Log($"当前的搜索算法为：{this.method}");
+        this.NextStepFunction = this.method switch
         {
-            case SearchMethod.BFS:
-                this.NextStepFunction = BFSSearch;
-                break;
-            case SearchMethod.DFS:
-                this.NextStepFunction = DFSSearch;
-                break;
-            case SearchMethod.ASTAR1:
-                this.NextStepFunction = AStarSearch1;
-                break;
-            case SearchMethod.ASTAR2:
-                this.NextStepFunction = AStarSearch2;
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
-        }
+            SearchMethod.BFS => BFSSearch,
+            SearchMethod.DFS => DFSSearch,
+            SearchMethod.ASTAR1 => AStarSearch1,
+            SearchMethod.ASTAR2 => AStarSearch2,
+            SearchMethod.ASTAR3 => AStarSearch3,
+            _ => throw new ArgumentOutOfRangeException(),
+        };
     }
 
     // public Node EndingNode = null;
@@ -233,7 +230,7 @@ public class Search
     /// <summary>
     /// 启发函数2：数字到其终点位置的曼哈顿距离和
     /// </summary>
-    private static int ManhattanDistanceSum(State s)
+    private static int ManhattanDistanceSum(in State s)
     {
         int r = s.radius;
         var digits = s.digits;
@@ -252,8 +249,90 @@ public class Search
         return cnt;
     }
 
+    /// <summary>
+    /// 数组达到顺序排列所需的最少循环次数
+    /// 即为：元素个数 - 数组中环的个数
+    /// </summary>
+    private static int minSwapTime(in int[] nums)
+    {
+        int count = 0;
+        int[] temp = new int[nums.Length];
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (temp[i] == 0)
+            {
+                count++;
+                for (int j = i; temp[j] == 0; j = nums[j])
+                {
+                    temp[j] = 1;
+                }
+            }
+        }
+        return nums.Length - count;
+    }
+
+    private static int minSwapTimeOfState(in State s)
+    {
+        int len = s.length;
+        int[] arr = new int[len];
+        for (int i = 0; i < len; i++)
+        {
+            int x = i / s.radius, y = i % s.radius;
+            arr[i] = s.digits[x, y];
+        }
+        return minSwapTime(in arr);
+    }
+
+    private static int countRev(in State s)
+    {
+        int count = 0;
+        //for (int i = 0; i < s.radius; i++)
+        //{
+        //    for (int j = 0; j < s.radius; j++) {
+        //        if (i > 0)
+        //        {
+        //            count += s.digits[i - 1, j] < s.digits[i, j] ? 0 : 1;
+        //        }
+        //        if (i < s.radius - 1)
+        //        {
+        //            count += s.digits[i, j] < s.digits[i + 1, j] ? 0 : 1;
+        //        }
+        //        if (j < 0)
+        //        {
+        //            count += s.digits[i, j - 1] < s.digits[i, j] ? 0 : 1;
+        //        }
+        //        if (j < s.radius - 1)
+        //        {
+        //            count += s.digits[i, j] < s.digits[i, j + 1] ? 0 : 1;
+        //        }
+        //    }
+        //}
+        int[] arr = new int[s.length];
+        int k = 0;
+        for (int i = 0; i < s.radius; i++)
+        {
+            for (int j = 0; j < s.radius; j++)
+            {
+                arr[k++] = s.digits[i, j];
+            }
+        }
+
+        for (int i = 0; i < s.length; i++)
+        {
+            for (int j = i + 1; j < s.length; j++)
+            {
+                if (arr[i] > arr[j])
+                    count++;
+            }
+        }
+        return count;
+    }
+
     private static readonly Dictionary<Node, int> _compDic1 = new Dictionary<Node, int>();
 
+    /// <summary>
+    /// 将最小交换次数作为启发函数
+    /// </summary>
     private class AStarComp1 : IComparer<Node>
     {
         public int Compare(Node x, Node y)
@@ -280,7 +359,7 @@ public class Search
             }
 
             var c = xv.CompareTo(yv);
-            return c != 0 ? c : x.state.ToString().CompareTo(y.state.ToString());
+            return c;
         }
     }
 
@@ -392,33 +471,36 @@ public class Search
 
     private static readonly Dictionary<Node, int> _compDic3 = new Dictionary<Node, int>();
 
+    /// <summary>
+    /// 将最小交换次数作为启发函数
+    /// </summary>
     private class AStarComp3 : IComparer<Node>
     {
         public int Compare(Node x, Node y)
         {
             int xv, yv;
-            if (_compDic2.ContainsKey(x))
+            if (_compDic3.ContainsKey(x))
             {
-                xv = _compDic2[x];
+                xv = _compDic3[x];
             }
             else
             {
-                xv = ManhattanDistanceSum(x.state) + x.depth;
-                _compDic2[x] = xv;
+                xv = ManhattanDistanceSum(x.state) + countRev(in x.state) + x.depth;
+                _compDic3[x] = xv;
             }
 
-            if (_compDic2.ContainsKey(y))
+            if (_compDic3.ContainsKey(y))
             {
-                yv = _compDic2[y];
+                yv = _compDic3[y];
             }
             else
             {
-                yv = ManhattanDistanceSum(y.state) + y.depth;
-                _compDic2[y] = yv;
+                yv = ManhattanDistanceSum(y.state) + countRev(in y.state) + y.depth;
+                _compDic3[y] = yv;
             }
 
             var c = xv.CompareTo(yv);
-            return c != 0 ? c : x.state.ToString().CompareTo(y.state.ToString());
+            return c;
         }
     }
 
@@ -484,5 +566,33 @@ public class Search
         CurResult = new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
     }
 
-    // SortedSet<Node> sortedSet2 = new SortedSet<Node>(new  )
+    readonly MinHeap<Node> heap3 = new MinHeap<Node>(new AStarComp3());
+    private void AStarSearch3()
+    {
+        if (heap3.Count > 0)
+        {
+            Node cur = heap3.Dequeue();
+
+            bool isEndingState = cur.state.Equals(endingState);
+
+            foreach (var op in operations)
+            {
+                if (cur.state.CanDoOperation(op))
+                {
+                    Node newNode = new Node(cur, op);
+                    if (!visitedSet.Contains(newNode.state))
+                    {
+                        visitedSet.Add(newNode.state);
+                        heap3.Enqueue(newNode);
+                    }
+                }
+            }
+
+            CurResult = new SearchResult
+            { SearchSucceed = isEndingState, SearchCanProceed = true, CurSearchingNode = cur };
+            return;
+        }
+
+        CurResult = new SearchResult { SearchSucceed = false, SearchCanProceed = false, CurSearchingNode = null };
+    }
 }

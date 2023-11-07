@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
         DFS, //广度优先
         ASTAR1, //A星算法1
         ASTAR2, //A星算法2
+        ASTAR3,
     }
 
     public AlgoType algoType = AlgoType.BFS;
@@ -281,6 +282,9 @@ public class GameManager : MonoBehaviour
                     break;
                 case AlgoType.ASTAR2:
                     method = Search.SearchMethod.ASTAR2;
+                    break;
+                case AlgoType.ASTAR3:
+                    method = Search.SearchMethod.ASTAR3;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
